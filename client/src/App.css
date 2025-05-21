@@ -1,41 +1,140 @@
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff9a8b;
+  --dark-color: #2c3e50;
+  --light-color: #f8f9fa;
+  --success-color: #20bf6b;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+}
+
 body {
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App {
   min-height: 100vh;
 }
 
+/* Gezinme çubuğu stilleri */
 .navbar {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
 }
 
+/* Kartlar için stil */
 .card {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: none;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
+  font-weight: 600;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1rem;
+}
+
+/* Butonlar için stil */
+.btn {
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
   font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+  background: linear-gradient(to right, #5700b3, #1a5edb);
 }
 
 .btn-info {
-  background-color: #17a2b8;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+}
+
+.btn-success {
+  background: linear-gradient(to right, #0ba360, #3cba92);
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
 }
 
 .btn-light {
-  background-color: #f8f9fa;
-  border-color: #ddd;
+  background: #f8f9fa;
+  color: var(--dark-color);
+  border: 1px solid #ddd;
+}
+
+/* Form elemanları stil */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(37, 117, 252, 0.25);
+}
+
+/* Tablolar için stil */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.table thead {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
 }
 
 .table td, .table th {
   vertical-align: middle;
+  border: none;
+  padding: 1rem;
 }
 
-.form-control:focus {
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
 }
 
 /* Mobil için responsive ayarlamalar */
@@ -49,7 +148,7 @@ body {
   }
   
   .btn-sm {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
   }
 }
