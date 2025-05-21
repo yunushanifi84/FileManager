@@ -1,0 +1,55 @@
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.navbar {
+  margin-bottom: 2rem;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-header {
+  font-weight: 500;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #ddd;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Mobil için responsive ayarlamalar */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .table {
+    font-size: 0.9rem;
+  }
+  
+  .btn-sm {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+  }
+}
