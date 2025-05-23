@@ -36,8 +36,8 @@ Bu uygulama, kullanıcıların PDF, PNG veya JPG gibi dosyaları yükleyebilece�
 
 1. Projeyi bilgisayarınıza klonlayın:
 ```
-git clone <repo-url>
-cd dosya-yonetim-uygulamasi
+git clone https://github.com/yunushanifi84/FileManager
+cd FileManager
 ```
 
 2. Backend kurulumu:
@@ -76,6 +76,3 @@ npm start
 2. Ana sayfada, sol taraftaki form ile dosya yükleyebilirsiniz
 3. Sağ tarafta yüklediğiniz dosyaları görebilir, görüntüleyebilir veya silebilirsiniz
 
-## Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız. 
